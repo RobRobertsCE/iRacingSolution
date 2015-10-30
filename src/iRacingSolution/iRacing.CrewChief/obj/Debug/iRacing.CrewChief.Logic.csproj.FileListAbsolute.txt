@@ -1,0 +1,9 @@
+C:\Users\rroberts\Source\Repos\iRacingSDK.Net\iRacing.CrewChief.Logic\obj\Debug\iRacing.CrewChief.Logic.csprojResolveAssemblyReference.cache
+C:\Users\rroberts\Source\Repos\iRacingSDK.Net\iRacing.CrewChief.Logic\bin\Debug\iRacingSDK.dll
+C:\Users\rroberts\Source\Repos\iRacingSDK.Net\iRacing.CrewChief.Logic\bin\Debug\YamlDotNet.dll
+C:\Users\rroberts\Source\Repos\iRacingSDK.Net\iRacing.CrewChief.Logic\bin\Debug\iRacingSDK.pdb
+C:\Users\rroberts\Source\Repos\iRacingSDK.Net\iRacing.CrewChief.Logic\bin\Debug\YamlDotNet.pdb
+C:\Users\rroberts\Source\Repos\iRacingSDK.Net\iRacing.CrewChief.Logic\bin\Debug\iRacing.CrewChief.dll
+C:\Users\rroberts\Source\Repos\iRacingSDK.Net\iRacing.CrewChief.Logic\bin\Debug\iRacing.CrewChief.pdb
+C:\Users\rroberts\Source\Repos\iRacingSDK.Net\iRacing.CrewChief.Logic\obj\Debug\iRacing.CrewChief.dll
+C:\Users\rroberts\Source\Repos\iRacingSDK.Net\iRacing.CrewChief.Logic\obj\Debug\iRacing.CrewChief.pdb

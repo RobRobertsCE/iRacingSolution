@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{47B9F09C-B83A-43B4-BFB7-86CB71160F09}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>iRacingCrewChief.Controls</RootNamespace>
+    <AssemblyName>iRacingCrewChief.Controls</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DriverView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DriverView.Designer.cs">
+      <DependentUpon>DriverView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\PitStopHandler.cs" />
+    <Compile Include="LapTimeView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LapTimeView.Designer.cs">
+      <DependentUpon>LapTimeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeaderboardView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LeaderboardView.Designer.cs">
+      <DependentUpon>LeaderboardView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PitStopSetupView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PitStopSetupView.Designer.cs">
+      <DependentUpon>PitStopSetupView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RaceLeaderboardView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RaceLeaderboardView.Designer.cs">
+      <DependentUpon>RaceLeaderboardView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SessionStatusView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SessionStatusView.Designer.cs">
+      <DependentUpon>SessionStatusView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\DriverViewModel.cs" />
+    <Compile Include="ViewModels\LapTimeViewModel.cs" />
+    <Compile Include="ViewModels\LeaderboardViewModel.cs" />
+    <Compile Include="ViewModels\LeaderboardViewModels.cs" />
+    <Compile Include="ViewModels\PitStopViewModel.cs" />
+    <Compile Include="ViewModels\SessionStateViewModel.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\iRacing.Models\iRacing.Models.csproj">
+      <Project>{5261a272-28a2-4867-a88f-ae221f222af8}</Project>
+      <Name>iRacing.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Properties\DataSources\iRacingCrewChief.Controls.ViewModels.DriverViewModel.datasource" />
+    <None Include="Properties\DataSources\iRacingCrewChief.Controls.ViewModels.LapTimeViewModel.datasource" />
+    <None Include="Properties\DataSources\iRacingCrewChief.Controls.ViewModels.LeaderboardViewModel.datasource" />
+    <None Include="Properties\DataSources\iRacingCrewChief.Controls.ViewModels.PitStopChanges.datasource" />
+    <None Include="Properties\DataSources\iRacingCrewChief.Controls.ViewModels.PitStopTire.datasource" />
+    <None Include="Properties\DataSources\iRacingCrewChief.Controls.ViewModels.PitStopTires.datasource" />
+    <None Include="Properties\DataSources\iRacingCrewChief.Controls.ViewModels.PitStopViewModel.datasource" />
+    <None Include="Properties\DataSources\iRacingCrewChief.Controls.ViewModels.SessionStateViewModel.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DriverView.resx">
+      <DependentUpon>DriverView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LapTimeView.resx">
+      <DependentUpon>LapTimeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeaderboardView.resx">
+      <DependentUpon>LeaderboardView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PitStopSetupView.resx">
+      <DependentUpon>PitStopSetupView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RaceLeaderboardView.resx">
+      <DependentUpon>RaceLeaderboardView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SessionStatusView.resx">
+      <DependentUpon>SessionStatusView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

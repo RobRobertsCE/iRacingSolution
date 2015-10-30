@@ -1,0 +1,8 @@
+C:\Users\rroberts\Source\Repos\iRacingSDK.Net\iRacing.Common\bin\Debug\iRacing.Common.dll
+C:\Users\rroberts\Source\Repos\iRacingSDK.Net\iRacing.Common\bin\Debug\iRacing.Common.pdb
+C:\Users\rroberts\Source\Repos\iRacingSDK.Net\iRacing.Common\obj\Debug\iRacing.Common.dll
+C:\Users\rroberts\Source\Repos\iRacingSDK.Net\iRacing.Common\obj\Debug\iRacing.Common.pdb
+C:\Users\rroberts\Source\Repos\iRacingCrewChief\iRacingSolution\iRacing.Common\bin\Debug\iRacing.Common.dll
+C:\Users\rroberts\Source\Repos\iRacingCrewChief\iRacingSolution\iRacing.Common\bin\Debug\iRacing.Common.pdb
+C:\Users\rroberts\Source\Repos\iRacingCrewChief\iRacingSolution\iRacing.Common\obj\Debug\iRacing.Common.dll
+C:\Users\rroberts\Source\Repos\iRacingCrewChief\iRacingSolution\iRacing.Common\obj\Debug\iRacing.Common.pdb

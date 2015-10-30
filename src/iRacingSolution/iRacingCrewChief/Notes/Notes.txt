@@ -1,0 +1,60 @@
+﻿regVar("dcBrakeBias", NULL, irsdk_float, 1, "In car brake bias adjustment", "%", IRSDK_LOG_ALL);
+regVar("dcAntiRollFront", NULL, irsdk_float, 1, "In car front anti roll bar adjustment", "", IRSDK_LOG_ALL);
+regVar("dcAntiRollRear", NULL, irsdk_float, 1, "In car rear anti roll bar adjustment", "", IRSDK_LOG_ALL);
+regVar("dcFuelMixture", NULL, irsdk_float, 1, "In car fuel mixture adjustment", "", IRSDK_LOG_ALL);
+regVar("dcBoostLevel", NULL, irsdk_float, 1, "In car boost level adjustment", "", IRSDK_LOG_ALL);
+regVar("dcRevLimiter", NULL, irsdk_float, 1, "In car rev limiter adjustment", "", IRSDK_LOG_ALL);
+regVar("dcWeightJackerLeft", NULL, irsdk_float, 1, "In car left weight jacker adjustment", "", IRSDK_LOG_ALL);
+regVar("dcWeightJackerRight", NULL, irsdk_float, 1, "In car right weight jacker adjustment", "", IRSDK_LOG_ALL);
+regVar("dcABS", NULL, irsdk_float, 1, "In car abs adjustment", "", IRSDK_LOG_ALL);
+regVar("dcTractionControl", NULL, irsdk_float, 1, "In car traction control adjustment", "", IRSDK_LOG_ALL);
+regVar("dcTractionControl2", NULL, irsdk_float, 1, "In car traction control 2 adjustment", "", IRSDK_LOG_ALL);
+regVar("dcWingFront", NULL, irsdk_float, 1, "In car front wing adjustment", "", IRSDK_LOG_ALL);
+regVar("dcWingRear", NULL, irsdk_float, 1, "In car rear wing adjustment", "", IRSDK_LOG_ALL);
+regVar("dcDiffEntry", NULL, irsdk_float, 1, "In car diff entry adjustment", "", IRSDK_LOG_ALL);
+regVar("dcDiffMiddle", NULL, irsdk_float, 1, "In car diff middle adjustment", "", IRSDK_LOG_ALL);
+regVar("dcDiffExit", NULL, irsdk_float, 1, "In car diff exit adjustment", "", IRSDK_LOG_ALL);
+regVar("dcEngineBraking", NULL, irsdk_float, 1, "In car engine braking adjustment", "", IRSDK_LOG_ALL);
+regVar("dcEnginePower", NULL, irsdk_float, 1, "In car engine power adjustment", "", IRSDK_LOG_ALL);
+regVar("dcThrottleShape", NULL, irsdk_float, 1, "In car throttle shape adjustment", "", IRSDK_LOG_ALL);
+
+
+
+regVar("dpFWingIndex", NULL, irsdk_float, 1, "Pitstop front wing adjustment", "", IRSDK_LOG_ALL);
+regVar("dpRWingIndex", NULL, irsdk_float, 1, "Pitstop rear wing adjustment", "", IRSDK_LOG_ALL);
+regVar("dpRWingSetting", NULL, irsdk_float, 1, "Pitstop rear wing adjustment", "", IRSDK_LOG_ALL);
+DEPRICATED regVar("dpWedgeAdj", NULL, irsdk_float, 1, "Pitstop wedge adjustment", "", IRSDK_LOG_ALL);
+regVar("dpPSSetting", NULL, irsdk_float, 1, "Pitstop power steering adjustment", "", IRSDK_LOG_ALL);
+regVar("dpRRDamperPerchOffsetm", NULL, irsdk_float, 1, "Pitstop right rear dampter perch offset adjustment", "", IRSDK_LOG_ALL);
+regVar("dpRBarSetting", NULL, irsdk_float, 1, "Pitstop rear bar adjustment", "", IRSDK_LOG_ALL);
+regVar("dpRFTruckarmP1Dz", NULL, irsdk_float, 1, "Pitstop rftruckarmP1Dz adjustment", "", IRSDK_LOG_ALL);
+regVar("dpTruckarmP1Dz", NULL, irsdk_float, 1, "Pitstop truckarmP1Dz adjustment", "", IRSDK_LOG_ALL);
+regVar("dpQtape", NULL, irsdk_float, 1, "Pitstop qtape adjustment", "", IRSDK_LOG_ALL);
+regVar("dpFNOMKnobSetting", NULL, irsdk_float, 1, "Pitstop front flap adjustment", "", IRSDK_LOG_ALL);
+
+http://members.iracing.com/jforum/posts/list/1775/1470675.page#9219668
+"dpFWingAngle", irsdk_float, 1, "Pitstop front wing adjustment" 
+"dpRWingAngle", irsdk_float, 1, "Pitstop rear wing adjustment" 
+"dpRrPerchOffsetm", irsdk_float, 1, "Pitstop right rear spring offset adjustment" 
+"dpLrWedgeAdj", irsdk_float, 1, "Pitstop lr spring offset adjustment" 
+"dpRrWedgeAdj", irsdk_float, 1, "Pitstop rr spring offset adjustment" 
+
+---------------
+I fixed the lfTireColdPressPa bug, I had the variables reading out the value currently on the car and not the pending value. Hopefully changing that does not mess anyone up. Just to be clear, now they will reflect what you request in the black box, and not what was last put on the car (although those will be the same until you manually change things in the black box). 
+
+---------------
+http://members.iracing.com/jforum/posts/list/1750/1470675.page
+
+Yes, fast repair is the last one on the list, so 8 
+enum irsdk_PitCommandMode				// this only works when the driver is in the car
+{
+	irsdk_PitCommand_Clear = 0,			// Clear all pit checkboxes
+	irsdk_PitCommand_WS,				// Clean the winshield, using one tear off
+	irsdk_PitCommand_Fuel,				// Add fuel, optionally specify the amount to add in liters or pass '0' to use existing amount
+	irsdk_PitCommand_LF,				// Change the left front tire, optionally specifying the pressure in KPa or pass '0' to use existing pressure
+	irsdk_PitCommand_RF,				// right front
+	irsdk_PitCommand_LR,				// left rear
+	irsdk_PitCommand_RR,				// right rear
+	irsdk_PitCommand_ClearTires,		// Clear tire pit checkboxes
+	irsdk_PitCommand_FR,				// Request a fast repair
+};
